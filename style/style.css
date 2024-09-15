@@ -1,0 +1,222 @@
+:root {
+  --primary: #179795;
+  --secondary: rgb(244, 252, 251);
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url("../assets/fonts/Poppins-Regular.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins;
+}
+
+*::selection {
+  background: var(--primary);
+  color: var(--secondary);
+}
+
+input,
+select,
+textarea,
+button {
+  outline: 0;
+}
+
+.main-container {
+  height: 100vh;
+  margin: 0 auto;
+  background: var(--secondary);
+  overflow: auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  background: var(--primary);
+
+  > img {
+    width: 100px;
+    height: 100px;
+  }
+  > .ku-house {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--secondary);
+    font-size: 2rem;
+    font-weight: bold;
+    margin-left: 4px;
+  }
+}
+
+.frame {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 50px;
+  width: 100%;
+  margin: 70px 0;
+  padding: 20px;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  position: relative;
+  width: 360px;
+}
+
+.m-home {
+  align-self: stretch;
+  flex-shrink: 0;
+  min-width: 0;
+  height: 52px;
+  cursor: pointer;
+  background: var(--primary);
+  border: none;
+  border-radius: 6px;
+  margin-bottom: 5px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.m-home > span {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.content {
+  position: relative;
+  width: 483px;
+  height: 352px;
+  padding-block: 10px;
+}
+
+.introductions {
+  letter-spacing: 0.4px;
+  height: 30px;
+  margin: 0 0 12px 0;
+  color: black;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.introductions-text {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 483px;
+  height: 299px;
+  margin: 23px 0 0 0;
+  color: black;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 25px;
+  text-align: left;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 300px;
+  height: 386px;
+  background: var(--primary);
+  border-radius: 6px;
+  padding-inline: 14px;
+  /* https://getcssscan.com/css-box-shadow-examples */
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+  > div {
+    margin-top: 12px;
+    .user-guide {
+      letter-spacing: 0.6px;
+      height: 30px;
+      margin: 32px 0 0;
+      color: #ffffff;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 30px;
+      text-align: center;
+      white-space: nowrap;
+    }
+  }
+
+  > .readable-content {
+    margin-top: 1rem;
+    overflow: hidden;
+    color: var(--secondary);
+    font-size: 15px;
+    line-height: 23px;
+  }
+
+  > button {
+    width: 170px;
+    height: 50px;
+    cursor: pointer;
+    text-transform: capitalize;
+    background-color: var(--secondary);
+    color: black;
+    border: none;
+    font-size: 1rem;
+    border-radius: 7px;
+  }
+}
+
+.footer {
+  position: relative;
+  height: 60px;
+  background: var(--primary);
+  margin-top: 150px;
+
+  > p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    text-transform: capitalize;
+  }
+}
+
+.icon {
+  font-size: 22px;
+  margin-right: 4px;
+  color: var(--secondary);
+}
+
+button {
+  transition: all 200ms ease-in-out;
+
+  &:hover {
+    opacity: 0.8;
+    scale: 95%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .header {
+    height: 100px;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .right {
+    margin-top: 30px;
+    width: 100%;
+  }
+}
