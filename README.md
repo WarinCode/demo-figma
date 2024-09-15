@@ -1,4 +1,4 @@
-# web-app
+# demo-figma
 
 To install dependencies:
 
